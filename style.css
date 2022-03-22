@@ -1,0 +1,150 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.txt{
+ margin-bottom: 100px;
+}
+.slika {
+ border: 5px solid #555;
+ max-width:300px;
+ max-height:300px;
+ height:100%;
+ width:100%;
+ float:left;
+ margin-right: 100px;
+}
+.slika1 {
+ border: 5px solid #555;
+ max-width:300px;
+ max-height:300px;
+ height:300px;
+ width:300px;
+ 
+ width:100%;
+ margin-right: 100px; 
+}
+
+.slika2{
+  border: 5px solid #555;
+ max-width:300px;
+ max-height:300px;
+ height:300px;
+ width:300px;
+ 
+ width:100%;
+ 
+}
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #ff6600;
+  color: white;
+  font-size: 20px;
+  position: sticky;
+  top:0;
+}
+.nav{
+  position: fixed;
+  width:100%;
+  top:152px;
+  background-color: #333;
+}
+.lijevo {
+  float: left;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  height: 100%;
+  position: sticky;
+}
+.desno{
+  float:right;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ff6600;
+}
+
+
+.sidebar {
+  margin: auto;
+  padding: 0;
+  width: 300px;
+  background-color: #b5b5b5;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  top:251;
+  
+}
+
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  
+}
+
+
+.sidebar a:hover:not(.active) {
+  background-color: #ff6600;
+  color: white;
+}
+
+div.content {
+  margin-left: 300px;
+  padding: 1px 16px;
+  
+}
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.footer {
+      position: fixed;
+      padding: 10px 10px 0px 10px;
+      bottom: 0;
+      width: 100%;
+      max-width:1885px;
+      height: 40px;
+      background: #ff6600;
+      text-align: center;
+      color:white;
+      
+      
+}
