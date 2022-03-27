@@ -33,7 +33,7 @@
     <a href="">Primjer</a>
     <a href="">Primjer</a>
   </div>
-
+<!--
   <div class="content">
     <h1>Primjer Naslov</h1>	
     <p>
@@ -56,6 +56,18 @@
       Quam viverra orci sagittis eu volutpat odio facilisis. Imperdiet massa tincidunt nunc pulvinar sapien. Purus ut faucibus pulvinar elementum integer enim neque volutpat ac.
       
     </p>
+  </div> -->
+  
+  <div class="content">
+  	<p><b>Start typing a name in the input field below:</b></p>
+	
+	<form> 
+		First name: <input type="text" onkeyup="showHint(this.value)">
+	</form>
+	
+	<p id="emptyRes"></p>
+	<table id="txtHint" style="border: 2px solid black">
+	</table>
   </div>
 
 
@@ -64,5 +76,6 @@
   <p>Primjer</p>
 </footer>
 
+ <script src="scripts/index.js"></script> 
 </body>
 </html>
