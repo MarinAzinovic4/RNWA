@@ -12,12 +12,14 @@ function showHint(str) {
 				arrRes.pop();
 				
 				if(arrRes.length != 0) {
+					document.getElementById("emptyRes").innerText = "";
 					document.getElementById("txtHint").innerHTML = "<tr><th>RESULT</th><th>DETAILS</th><th>UPDATE</th><th>DELETE</th></tr>";
 					arrRes.forEach(item => {
 						document.getElementById("txtHint").innerHTML += "<tr><td>" + item + "<td><a href='#'>DETAILS</a></td><td><a href='#'>UPDATE</a></td><td><a href='#'>DELETE</a></td></tr>";
 					});
 				} else {
 					document.getElementById("emptyRes").innerText = "Ne podudara se nista sa tom pretragom.";
+					document.getElementById("txtHint").innerText = "";
 				}
 				
 
