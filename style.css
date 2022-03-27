@@ -136,7 +136,7 @@ div.content {
 }
 
 .footer {
-      position: fixed;
+      position: sticky;
       padding: 10px 10px 0px 10px;
       bottom: 0;
       width: 100%;
@@ -145,6 +145,41 @@ div.content {
       background: #ff6600;
       text-align: center;
       color:white;
+}
+
+.tablica  {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
       
+.tablica  td, .tablica th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
       
+.tablica  tr:nth-child(even) {  
+    background-color: #f2f2f2;
+}
+      
+.tablica  tr:hover {
+  background-color: #ddd;
+}
+      
+.tablica th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #ff6600;
+   color: white;
+}
+
+form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
