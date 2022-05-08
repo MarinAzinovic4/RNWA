@@ -67,6 +67,7 @@ public class MainController {
 
     @PostMapping("/add")
     public ResponseEntity<ResponseMessage> addDepartment(@RequestBody Department department) {
+        System.out.println("Here is the dept:" + department + "\n\n");
         departmentRepository.save(department);
 
         ResponseMessage responseMessage = new ResponseMessage(HttpStatus.CREATED, "Department added successfully.");
@@ -92,8 +93,8 @@ public class MainController {
     }
 
 
-    @DeleteMapping("/delete")
-    public ResponseEntity<ResponseMessage> deleteDepartment(@RequestBody Long id) {
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<ResponseMessage> deleteDepartment(@PathVariable @NotNull Long id) {
         ResponseMessage responseMessage = new ResponseMessage();
 
         if (departmentRepository.findById(id).isPresent()) {
