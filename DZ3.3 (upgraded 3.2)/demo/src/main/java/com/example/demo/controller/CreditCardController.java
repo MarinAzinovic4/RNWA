@@ -55,16 +55,6 @@ public class CreditCardController {
         return new ResponseEntity<>(responseMessage, responseMessage.getHttpStatus());
     }
 
-
-    @GetMapping("/get/name/{searchString}")
-    public ResponseEntity<ResponseMessage> searchCreditCards(@PathVariable @NotNull String searchString) {
-        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.OK, "OK.", CreditCardRepository.findByNameContaining(searchString));
-        
-        return new ResponseEntity<>(responseMessage, responseMessage.getHttpStatus());
-    }
-
-
-
     @PostMapping("/add")
     public ResponseEntity<ResponseMessage> addCreditCard(@RequestBody CreditCard CreditCard) {
         System.out.println("Here is the dept:" + CreditCard + "\n\n");
