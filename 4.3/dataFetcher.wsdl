@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<definitions name="Converter" targetNamespace="urn:Converter" xmlns:tns="urn:Converter"  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  
+  <message name="doFetchData">
+    <part name="id" type="tns:getName" />
+  </message>
+  
+  <message name="doFetchDataResponse">
+    <part name="return" type="tns:FetchDataResponse" />
+  </message>  
+  
+  <portType name="FetchDataPort">
+    <operation name="doFetchData">
+	  <input message="tns:doFetchData" />
+	  <output message="tns:doFetchDataResponse" />
+	</operation>
+  </portType>
+  
+  <binding name="FetchDataBinding" type="tns:FetchDataPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="doFetchData">
+	    <soap:operation soapAction="urn:FetchDataAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>  
+  
+  <service name="FetchDataService">
+    <port name="FetchDataPort" binding="tns:FetchDataBinding">
+	  <soap:address location="http://localhost/4.3/server.php" />
+	</port>
+  </service>
+    
+</definitions>

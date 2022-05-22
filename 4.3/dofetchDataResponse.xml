@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:Converter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/xml-soap" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <ns1:doFetchDataResponse>
+            <return xsi:type="ns2:Map">
+                <item>
+                    <key xsi:type="xsd:int">0</key>
+                    <value xsi:type="xsd:string">12</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:string">DepartmentID</key>
+                    <value xsi:type="xsd:string">12</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:int">1</key>
+                    <value xsi:type="xsd:string">Document Control</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:string">Name</key>
+                    <value xsi:type="xsd:string">Document Control</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:int">2</key>
+                    <value xsi:type="xsd:string">Quality Assurance</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:string">GroupName</key>
+                    <value xsi:type="xsd:string">Quality Assurance</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:int">3</key>
+                    <value xsi:type="xsd:string">1998-06-01 00:00:00</value>
+                </item>
+                <item>
+                    <key xsi:type="xsd:string">ModifiedDate</key>
+                    <value xsi:type="xsd:string">1998-06-01 00:00:00</value>
+                </item>
+            </return>
+        </ns1:doFetchDataResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
