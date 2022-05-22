@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<definitions name="Converter" targetNamespace="urn:Converter" xmlns:tns="urn:Converter"  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  
+  <message name="doConvertBamToEur">
+    <part name="yourName" type="tns:getName" />
+  </message>
+  
+  <message name="doConvertBamToEurResponse">
+    <part name="return" type="tns:ConvertBamToEurResponse" />
+  </message>  
+  
+  <portType name="ConvertBamToEurPort">
+    <operation name="doConvertBamToEur">
+	  <input message="tns:doConvertBamToEur" />
+	  <output message="tns:doConvertBamToEurResponse" />
+	</operation>
+  </portType>
+  
+  <binding name="ConvertBamToEurBinding" type="tns:ConvertBamToEurPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="doConvertBamToEur">
+	    <soap:operation soapAction="urn:ConvertBamToEurAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>  
+  
+  <service name="ConvertBamToEurService">
+    <port name="ConvertBamToEurPort" binding="tns:ConvertBamToEurBinding">
+	  <soap:address location="http://localhost/4.1/server.php" />
+	</port>
+  </service>
+
+
+  <message name="doConvertEurToBam">
+    <part name="yourName" type="tns:getName" />
+  </message>
+  
+  <message name="doConvertEurToBamResponse">
+    <part name="return" type="tns:ConvertEurToBamResponse" />
+  </message>  
+  
+  <portType name="ConvertEurToBamPort">
+    <operation name="doConvertEurToBam">
+	  <input message="tns:doConvertEurToBam" />
+	  <output message="tns:doConvertEurToBamResponse" />
+	</operation>
+  </portType>
+  
+   <binding name="ConvertEurToBamBinding" type="tns:ConvertEurToBamPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="doConvertEurToBam">
+	    <soap:operation soapAction="urn:ConvertEurToBamAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>  
+  
+  <service name="ConvertEurToBamService">
+    <port name="ConvertEurToBamPort" binding="tns:ConvertEurToBamBinding">
+	  <soap:address location="http://localhost/4.1/server.php" />
+	</port>
+  </service>
+  
+  <message name="doConvertBamToHrk">
+    <part name="yourName" type="tns:getName" />
+  </message>
+  
+  <message name="doConvertBamToHrkResponse">
+    <part name="return" type="tns:ConvertBamToHrkResponse" />
+  </message>  
+  
+  <portType name="ConvertBamToHrkPort">
+    <operation name="doConvertBamToHrk">
+	  <input message="tns:doConvertBamToHrk" />
+	  <output message="tns:doConvertBamToHrkResponse" />
+	</operation>
+  </portType>
+  
+   <binding name="ConvertBamToHrkBinding" type="tns:ConvertBamToHrkPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="doConvertBamToHrk">
+	    <soap:operation soapAction="urn:ConvertBamToHrkAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>  
+  
+  <service name="ConvertBamToHrkService">
+    <port name="ConvertBamToHrkPort" binding="tns:ConvertBamToHrkBinding">
+	  <soap:address location="http://localhost/4.1/server.php" />
+	</port>
+  </service>
+
+
+  <message name="doConvertHrkToBam">
+    <part name="yourName" type="tns:getName" />
+  </message>
+  
+  <message name="doConvertHrkToBamResponse">
+    <part name="return" type="tns:ConvertHrkToBamResponse" />
+  </message>  
+  
+  <portType name="ConvertHrkToBamPort">
+    <operation name="doConvertHrkToBam">
+	  <input message="tns:doConvertHrkToBam" />
+	  <output message="tns:doConvertHrkToBamResponse" />
+	</operation>
+  </portType>
+  
+   <binding name="ConvertHrkToBamBinding" type="tns:ConvertHrkToBamPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="doConvertHrkToBam">
+	    <soap:operation soapAction="urn:ConvertHrkToBamAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:Converter" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>  
+  
+  <service name="ConvertHrkToBamService">
+    <port name="ConvertHrkToBamPort" binding="tns:ConvertHrkToBamBinding">
+	  <soap:address location="http://localhost/4.1/server.php" />
+	</port>
+  </service>
+
+
+    
+</definitions>
