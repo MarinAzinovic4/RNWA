@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <?php include __DIR__.'4.1\server.php'; ?> 
+    <?php include __DIR__.'4.1\converter.php'; ?> 
+        
+<div class="header">
+    <h3>Naziv</h3>
+</div>
+
+<div class="ss">
+  <form method="post" action="server.php" action="converter.wsdl">
+    <label for="dep"><h3>Unesi vrijednost</h3> </label>
+    <input id="value" type="text" class="in" name="dep">
+
+    <label for="drop"><h3>Cifre</h3></label>
+    <div class="drop">
+        <select id="slct">
+            <option id="BamToEur" value="BamToEur">BAM to EUR</option>
+            <option id="EurToBam" value="EurToBam">EUR to BAM</option>
+            <option id="BamToHrk" value="BamToHrk">BAM to HRK</option>
+            <option id="HrkToBam" value="HrkToBam">HRK to BAM</option>
+        </select>
+    </div>
+    
+
+    
+
+    <label for="grp"><h3>Iznos</h3></label>
+    <p id="result" class="txt"></p>
+
+    
+        <button class="da">Pretvorba</button>
+        <button class="ne">Natrag</button>
+  </form>
+</div>
+
+<footer class="footer">
+    <p>Primjer</p>
+  </footer>
+
+
+</body>
+</html>
+
+<style>
+.drop select{
+  background-color: #ff6600;
+  color: white;
+  padding: 10px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.txt{
+  text-align: justify;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    }
+
+.in{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.da {
+  width: 100%;
+  background-color: #16a6bf;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ne {
+  width: 100%;
+  background-color: #df3409;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.da:hover {
+  background-color: #0381ff;
+}
+
+.ne:hover {
+  background-color: #cd0000;
+}
+
+.buttons {
+width: 200px;
+margin: 0 auto;
+display: inline;
+}
+
+.ss {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #ff6600;
+  color: white;
+  font-size: 20px;
+  position: sticky;
+  top:0;
+}
+body {
+  background-color: rgb(90, 89, 88);
+}
+.footer {
+ position: bottom;
+ padding: 10px 10px 0px 10px;
+ bottom: 0;
+ width: 100%;
+ max-width:1885px;
+ height: 40px;
+ background: #ff6600;
+ text-align: center;
+ color:white;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 2.5rem;
+}
+</style>
+
+<script>
+    
+    var d = document.getElementById("slct").value;
+    var result = document.getElementById("result");
+    var value = document.getElementById("value")
+    function fun(){
+      
+        if (d == BamToEur){
+            return doConvertBamToEur($value);
+        }else if(d == EurToBam){
+            return doConvertEurToBam($value)
+        }else if(d == BamToHrk){
+            return doConvertBamToHrk($value)
+        }else if(d == HrkToBam){
+            return doConvertHrkToBam($value)
+        }
+
+    }
+    btn.addEventListener('click', (e) => {
+     result.innerHTML = fun($value);
+    });
+
+</script>
