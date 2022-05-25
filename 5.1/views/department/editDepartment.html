@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uredi department</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts\index.js"></script>
+</head>
+<body>
+    
+<div class="header">
+    <h3>Uredi department</h3>
+</div>
+
+<div class="ss">
+  <form id="addDeptForm">
+    <label for="dep">Ime: </label>
+    <input type="text" id="deptName" class="in" name="deptName">
+
+    <label for="grp">Prezime:</label>
+    <input type="text" id="deptSurname" class="in" name="deptSurname" >
+
+    <label for="grp">ID:</label>
+    <input type="text" id="deptId" class="in" name="deptId">
+    
+        <button type="button" class="da" onclick="">Spremi</button>
+        <a href="http://localhost/zadaca/index.html"><button type="button" class="ne">Nazad</button></a>
+  </form>
+</div>
+
+<footer class="footer">
+    <p>Primjer</p>
+  </footer>
+
+
+	<script src="../scripts/index.js"></script> 
+</body>
+</html>
+
+<style>
+.ss{
+    width: 40%;
+ 	 margin: 15px auto 0;
+}
+.in{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.da {
+  width: 100%;
+  background-color: #16a6bf;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ne {
+  width: 100%;
+  background-color: #df3409;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.da:hover {
+  background-color: #0381ff;
+}
+
+.ne:hover {
+  background-color: #cd0000;
+}
+
+.buttons {
+width: 200px;
+margin: 0 auto;
+display: inline;
+}
+
+.ss {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #ff6600;
+  color: white;
+  font-size: 20px;
+  position: sticky;
+  top:0;
+}
+body {
+  background-color: rgb(90, 89, 88);
+}
+.footer {
+ position: bottom;
+ padding: 10px 10px 0px 10px;
+ bottom: 0;
+ width: 100%;
+ max-width:1885px;
+ height: 40px;
+ background: #ff6600;
+ text-align: center;
+ color:white;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 2.5rem;
+}
+</style>
